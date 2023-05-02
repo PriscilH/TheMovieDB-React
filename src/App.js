@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { BACKDROP_BASE_URL } from "./config";
 import TVShowDetails from "./components/TVShowDetails"
 import './App.css';
+import Logo from './components/Logo';
+import logo from "./assets/images/logo.png"
 
 
 function App() {
@@ -30,8 +32,9 @@ async function fetchPopulars() {
       <div className='Header'>
         <div className='row'>
           <div className='col-4'>
-            <div>Logo</div>
-            <div>Subtitle</div>
+            <div>
+              <Logo image={logo} title="Watowatch" subtitle="Find a show you may like"/>
+            </div>
           </div>
           <div className='col-sm-12 col-md-4'>
             <input style={{width: "100%"}} type="text"/>

@@ -15,6 +15,31 @@ body {
  flex: 1;
 }
 
+/* LOGO */
+
+.imagContain {
+  display: flex;
+}
+
+.img {
+  height: 40px;
+  width: 40px;
+}
+
+.Logotitle {
+  font-size: 25px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.subtitle {
+  margin-left: 7px;
+  white-space: nowrap;
+}
+
+/* SHOWDETAILS */
+
 .Show-details {
  flex: 2;
 }
@@ -45,6 +70,10 @@ body {
   overflow-y: hidden;
   margin-top: 10px;
 }
+
+
+
+
 
 .Recommand {
  flex: 1;
