@@ -3,6 +3,19 @@ body {
     font-family: Maximum Impact;
 }
 
+/* Mouse out of scrollbar */ 
+::-webkit-scrollbar{
+    height: 14px;
+    width: 4px;
+    background: transparent;
+}
+
+/* Mouse out on horizontal scrollbar */ 
+::-webkit-scrollbar-thumb:horizontal{
+    background: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}
+
 .App {
     display: flex;
     height: 100vh;
@@ -12,7 +25,7 @@ body {
 }
 
 .Header {
- flex: 1;
+  flex: 2;
 }
 
 /* LOGO */
@@ -41,7 +54,7 @@ body {
 /* SHOWDETAILS */
 
 .Show-details {
- flex: 2;
+ flex: 4;
 }
 
 .title {
@@ -72,15 +85,60 @@ body {
 }
 
 
-
-
+/* Recommandations */
 
 .Recommand {
- flex: 1;
+ flex: 2;
 }
 
+.ItemContain {
+  position: relative;
+  cursor: pointer;
+}
 
+.titleItem {
+  position: absolute;
+  margin-top: -40px;
+  height: 40px;
+  width: 300px;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
+.SmallImg {
+  border-radius: 10px;
+}
+
+/* TvShowList */
+
+.ListTitle {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.list:hover {
+  overflow-x: overlay;
+}
+
+.list {
+  display: flex;
+  width: 100vw - 25px;
+  overflow-x: hidden;
+  /* For scrollbar */
+  padding-bottom: 30px;
+}
+
+.tvShowItem {
+  margin-right: 20px;
+}
 
 .Footer {
     flex: 1;
