@@ -2,11 +2,11 @@ import { TVShowAPI } from './Api/tv-show';
 import { useEffect, useState } from "react";
 import { BACKDROP_BASE_URL } from "./config";
 import TVShowDetails from "./components/TVShowDetails";
-import TvShowListItem from './components/TvShowListItem';
 import './App.css';
 import Logo from './components/Logo';
 import logo from "./assets/images/logo.png";
 import TvShowList from './components/TvShowList';
+import SearchBar from './components/SearchBar';
 
 
 
@@ -40,16 +40,12 @@ async function fetchPopulars() {
     }
   }
 
-  function updateCurrentTVShow(tvShow) {
-    setCurrentTVShow(tvShow);
+  async function fetchByTitle(title) {
+    const searchResponse = await TVShowAPI.fetchByTitle(title);
+    if (searchResponse.length > 0) {
+      setCurrentTVShow(searchResponse[0]);
+    }
   }
-
-  // async function fetchByTitle(title) {
-  //   const searchResponse = await TVShowAPI.fetchByTitle(title);
-  //   if (searchResponse.length > 0) {
-  //     setCurrentTVShow(searchResponse[0]);
-  //   }
-  // }
 
   return (
     <div className="App" style={{background: currentTVShow
@@ -63,7 +59,7 @@ async function fetchPopulars() {
               <Logo image={logo} title="Watowatch" subtitle="Find a show you may like"/>
           </div>
           <div className='col-sm-12 col-md-4'>
-            <input style={{width: "100%"}} type="text"/>
+            <SearchBar onSubmit={fetchByTitle}/>
           </div>
         </div>
       </div>

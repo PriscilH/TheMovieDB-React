@@ -2,7 +2,6 @@ import axios from "axios";
 import {BASE_URL, API_KEY_MOVIES } from "../config"
 
 
-
  export const TVShowAPI = {
     fetchPopulars: async () => {
       const response = await axios.get(`${BASE_URL}tv/popular${API_KEY_MOVIES}`);
