@@ -1,5 +1,5 @@
 body {
-    /* color: white; */
+    color: white;
     font-family: Maximum Impact;
 }
 
@@ -8,6 +8,7 @@ body {
     height: 100vh;
     padding: 25px;
     flex-direction: column;
+    background-color: black;
 }
 
 .Header {
