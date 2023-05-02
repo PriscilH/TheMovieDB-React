@@ -25,25 +25,37 @@ function App() {
   }, [currentTVShow]);
 
 async function fetchPopulars() {
+  try {
     const popularTVShowList = await TVShowAPI.fetchPopulars();
     if (popularTVShowList.length > 0) {
       setCurrentTVShow(popularTVShowList[0]);
     }
+  } catch (error) {
+    alert("Erreur durant la recherche des séries populaires")
+  }
   }
   
   async function fetchRecommendations(tvShowId) {
-    const recommendationListResp = await TVShowAPI.fetchRecommendations(
+    try {
+      const recommendationListResp = await TVShowAPI.fetchRecommendations(
       tvShowId
     );
     if (recommendationListResp.length > 0) {
       setRecommendationList(recommendationListResp.slice(0, 10));
+    } 
+    } catch (error) {
+      alert("Erreur durant la recherche des séries recommandées")
     }
   }
 
   async function fetchByTitle(title) {
-    const searchResponse = await TVShowAPI.fetchByTitle(title);
+    try {
+      const searchResponse = await TVShowAPI.fetchByTitle(title);
     if (searchResponse.length > 0) {
       setCurrentTVShow(searchResponse[0]);
+    }
+    } catch (error) {
+      alert("Erreur durant la recherche de la série")
     }
   }
 
