@@ -7,6 +7,7 @@ import Logo from './components/Logo';
 import logo from "./assets/images/logo.png";
 import TvShowList from './components/TvShowList';
 import SearchBar from './components/SearchBar';
+import Footer from './components/Footer';
 
 
 
@@ -81,7 +82,9 @@ async function fetchPopulars() {
       <div className='Recommand'>
       {recommendationList && recommendationList.length > 0 && <TvShowList onClickItem={setCurrentTVShow} tvShowList={recommendationList}/>}
       </div>
-      <div className='Footer'>Footer</div>
+      <div className='Footer'>
+        <Footer/>
+      </div>
     </div>
   );
 }
