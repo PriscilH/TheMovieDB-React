@@ -14,11 +14,15 @@
     "web-vitals": "^2.1.0"
   },
   "resolutions": {
-  "path-to-regexp": "0.1.12",
-  "@babel/traverse": "7.23.2",
-  "form-data": "3.0.4",
-  "cross-spawn": "7.0.5",
-  "braces": "3.0.3"
+    "http-proxy-middleware": "2.0.9",
+    "path-to-regexp": "0.1.12",
+    "@babel/runtime": "7.26.10",
+    "@babel/helpers": "7.26.10",
+    "@babel/traverse": "7.23.2",
+    "form-data": "3.0.4",
+    "cross-spawn": "7.0.5",
+    "braces": "3.0.3",
+    "rollup": "2.79.2"
   },
   "scripts": {
     "start": "node_modules/.bin/react-scripts start",
