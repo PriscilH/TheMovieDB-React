@@ -16,7 +16,9 @@
   "resolutions": {
   "path-to-regexp": "0.1.12",
   "@babel/traverse": "7.23.2",
-  "form-data": "3.0.4"
+  "form-data": "3.0.4",
+  "cross-spawn": "7.0.5",
+  "braces": "3.0.3"
   },
   "scripts": {
     "start": "node_modules/.bin/react-scripts start",
