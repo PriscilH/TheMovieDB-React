@@ -14,7 +14,9 @@
     "web-vitals": "^2.1.0"
   },
   "resolutions": {
-  "path-to-regexp": "0.1.12"
+  "path-to-regexp": "0.1.12",
+  "@babel/traverse": "7.23.2",
+  "form-data": "3.0.4"
   },
   "scripts": {
     "start": "node_modules/.bin/react-scripts start",
