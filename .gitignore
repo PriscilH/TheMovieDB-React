@@ -5,8 +5,6 @@
 /.pnp
 .pnp.js
 
-# Ignorer le fichier config.js dans src
-/src/config.js
 
 # testing
 /coverage

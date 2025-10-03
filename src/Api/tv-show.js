@@ -1,6 +1,7 @@
 import axios from "axios";
-import {BASE_URL, API_KEY_MOVIES } from "../config"
+import {BASE_URL } from "../config"
 
+const API_KEY_MOVIES = `?api_key=${process.env.REACT_APP_API_KEY_MOVIES}`;
 
  export const TVShowAPI = {
     fetchPopulars: async () => {
